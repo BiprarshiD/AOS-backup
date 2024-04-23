@@ -1,0 +1,8 @@
+ mpirun -n 2  python3 ./werewolves.py --xterm -1!
+ mpirun -n 2  python3 ./werewolves.py -xterm
+ mpiexec -n 2  python3 ./werewolves.py --xterm -1! 
+ mpiexec -n 2  python3 ./werewolves.py -xterm
+
+call this from moderator
+
+ 
