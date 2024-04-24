@@ -22,7 +22,7 @@ tmux send-keys -t GameSession:0.0 "sudo su - ${players[0]}" C-m
 tmux send-keys -t GameSession:0.0 "$PASSWORD" C-m
 sleep 3
 tmux send-keys -t GameSession:0.0 "export PS1='\[\e[0;31m\]\u@\h:\w\$ \[\e[m\]'" C-m  # Red prompt
-tmux send-keys -t GameSession:0.0 "python2 client.py" C-m
+tmux send-keys -t GameSession:0.0 "python client.py" C-m
 
 # Delay to ensure commands have time to be processed before splitting
 sleep 1
@@ -39,7 +39,7 @@ for i in "${players[@]:1}"; do
     tmux send-keys -t GameSession:0.$index "$PASSWORD" C-m
     sleep 3
     tmux send-keys -t GameSession:0.$index "export PS1='${colors[$index-1]}\u@\h:\w\$ \[\e[m\]'" C-m  # Apply different colors
-    tmux send-keys -t GameSession:0.$index "python2 client.py" C-m
+    tmux send-keys -t GameSession:0.$index "python client.py" C-m
     index=$((index + 1))
 done
 
