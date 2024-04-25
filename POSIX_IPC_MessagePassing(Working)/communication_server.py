@@ -230,8 +230,6 @@ def recv(pipe):
         output = f.read().split('\n')
         f.close()
         """
-        print(output)
-        print(pipe)
         output = output.decode('utf-8')
         output = output.split(':')
         for i in range(len(output)):
@@ -273,7 +271,6 @@ deathspeech = 0
 deadGuy = ""
 def multiRecv(player, players):
     global allowed, voters, targets, deathspeech, deadGuy, all
-    print('In multirecv')
     while (True):
         msg = recv(all[player][0])
         if (msg is None):
