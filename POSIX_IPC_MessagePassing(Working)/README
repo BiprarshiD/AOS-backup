@@ -1,0 +1,42 @@
+File layout is as follows:
+
+moderator user directory contains:
+server.py
+communication_server.py
+
+player0 user directory contains:
+client.py
+communicationclient.py
+
+player1 user directory contains:
+client.py
+communicationclient1.py
+
+player2 user directory contains:
+client.py
+communicationclient2.py
+
+player3 user directory contains:
+client.py
+communicationclient3.py
+
+
+
+The communication script will be different across players and the moderator. No change has been made to the client.py and server.py. The communication between 
+players and the moderator to do voting, chatting and connection are made through POSIC IPC Message Queues using Message Passing.
+
+
+
+
+In order to setup posix_ipc we have to do the following setup:
+Pip3 install posix_ipc
+mkdir /dev/mqueue
+mount -t mqueue none /dev/mqueue
+ls /dev/mqueue
+cd /dev/mqueue
+chmod 777 message_queue_server
+chmod 777 message_queue_player0
+chmod 777 message_queue_player1
+chmod 777 message_queue_player2
+chmod 777 message_queue_player3
+
