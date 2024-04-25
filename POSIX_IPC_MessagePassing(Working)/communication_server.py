@@ -365,7 +365,6 @@ def poll(passedVoters, duration, passedValidTargets, passedCharacter, everyone, 
 
 def vote(voter, target):
     global votes, votesReceived, voters, character, isSilent, voter_targets
-    print(target)
     # Code Updated on 7/20 by Tim
     if voter_targets.get(voter, None) == None:  # Added line
 
