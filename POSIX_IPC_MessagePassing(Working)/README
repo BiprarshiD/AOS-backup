@@ -1,3 +1,5 @@
+The game has been tested and verified with 4 players.
+
 The file layout is as follows:
 
 moderator user directory contains:
@@ -21,29 +23,36 @@ client.py
 communicationclient3.py
 
 
-
 The communication script will be different across players and the moderator. No change has been made to the client.py and server.py. The communication between 
 players and the moderator to do voting, chatting and connection are made through POSIC IPC Message Queues using Message Passing.
 
 
-
-In order to setup posix_ipc we have to do the following setup:
+*****************************************************SETUP POSIX IPC Message Queues in Kernel***************************************************************
+To setup posix_ipc we have to do the following setup:
 Pip3 install posix_ipc
 mkdir /dev/mqueue
 mount -t mqueue none /dev/mqueue
-ls /dev/mqueue
+ls /dev/mqueue (at this stage no queues have been created in the kernel, so this returns empty)
+run the initializer script (this will create the message queues in the kernel)
 cd /dev/mqueue
-chmod 777 message_queue_server
-chmod 777 message_queue_player0
-chmod 777 message_queue_player1
-chmod 777 message_queue_player2
-chmod 777 message_queue_player3
+chmod 777 message_queue_*    (change permissions on the message queues so that all players can send/receive messages to/from the moderator)
 
+
+**************************************************Scripts to run from moderator and players************************************************************************
 Scripts to run from moderator:
 python3 server.py
 
 Scripts to run from players:
-python3 client.py [ change the import header for communicationclient.py in each client.py file according to the player]
+python3 client.py 
 
+Note: [change the import header for communicationclient.py in each client.py file according to the player]
+Player0: import communicationclient
+Player1 : import communicationclient1
+Player2 : import communicationclient2
+Player3 : import communicationclient3
+
+
+
+Ported the Code from python2 to python3
 Used Python3 to run werewolves. Converted all python2 statements to python3 like print ---> print(), exception ---> exception() and raw_input()--->input()
 
