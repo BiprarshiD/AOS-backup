@@ -200,7 +200,7 @@ def standardTurn():
     #**************WEREWOLVES************************
         if len(wolves) < 2: wolftalktime = 0
         c.broadcast("Werewolves, open your eyes.", c.complement(wolves, all))
-        c.broadcast('Werewolves, %s, you must choose a victim.  You have %d seconds to discuss.  Possible victims are %s'%(str(wolves.keys()), wolftalktime, str(sorted(all.keys()))), wolves)
+        c.broadcast('Werewolves, %s, you must choose a victim.  You have %d seconds to discuss.  Possible victims are %s'%(str(list(wolves.keys())), wolftalktime, str(sorted(all.keys()))), wolves)
         c.log('Werewolves debate', 0, 1, 0)
         c.allow(wolves)
         c.sleep(wolftalktime)
@@ -442,9 +442,9 @@ def main():
         c.broadcast('*' * 15 + str(len(all)) + ' players remain.' + '*' * 18, all)
         c.broadcast('*' * 50, all)
         c.log('Round ' + str(round), 0, 1, 0)
-        c.log('Townspeople: ' + str(all.keys()), 1, 1, 1)
-        c.log('Werewolves: ' + str(wolves.keys()), 1, 0, 1)
-        c.log('Witch: ' + str(witch.keys()), 1, 0, 1)
+        c.log('Townspeople: ' + str(list(all.keys())), 1, 1, 1)
+        c.log('Werewolves: ' + str(list(wolves.keys())), 1, 0, 1)
+        c.log('Witch: ' + str(list(witch.keys())), 1, 0, 1)
         round += 1
         standardTurn()
 
