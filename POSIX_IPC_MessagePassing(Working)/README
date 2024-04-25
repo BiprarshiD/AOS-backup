@@ -55,7 +55,7 @@ Player2 : import communicationclient2
 Player3 : import communicationclient3
 
 
-
+**************************************************Python2 to Python3 Porting****************************************************************************************
 Ported the Code from python2 to python3
 Used Python3 to run werewolves. Converted all python2 statements to python3 like print ---> print(), exception ---> exception() and raw_input()--->input()
 Also, In python2, dict.keys() is not subscriptable. so changed those statements in server.py and client.py to list(dict.keys()). This change made the keys arrays of the dictionary into a list.
