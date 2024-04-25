@@ -1,4 +1,4 @@
-File layout is as follows:
+The file layout is as follows:
 
 moderator user directory contains:
 server.py
@@ -27,7 +27,6 @@ players and the moderator to do voting, chatting and connection are made through
 
 
 
-
 In order to setup posix_ipc we have to do the following setup:
 Pip3 install posix_ipc
 mkdir /dev/mqueue
@@ -39,4 +38,12 @@ chmod 777 message_queue_player0
 chmod 777 message_queue_player1
 chmod 777 message_queue_player2
 chmod 777 message_queue_player3
+
+Scripts to run from moderator:
+python3 server.py
+
+Scripts to run from players:
+python3 client.py [ change the import header for communicationclient.py in each client.py file according to the player]
+
+Used Python3 to run werewolves. Converted all python2 statements to python3 like print ---> print(), exception ---> exception() and raw_input()--->input()
 
