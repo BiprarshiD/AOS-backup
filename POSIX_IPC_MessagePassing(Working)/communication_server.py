@@ -209,15 +209,13 @@ def recv(pipe):
         output = f.read().split('\n')
         f.close()
         """
-        
         output = output.decode('utf-8')
         output = output.split(':')
         for i in range(len(output)):
             if len(output[i]) > 0:
                 out = pipe.split('to')[0]
                 out1 = pipe.split('to')[1]
-                if (output[i]=='s' or output[i] == out or output[i] == out1 or imposterMode == 1):
-                    print(output)
+                if (output[i]=='s' or output[i] == out or output[i] == '0' or output[i]== '1' or imposterMode == 1):
                     return output
     except (Exception, p):
         log('receive error:%s'%p, 0, 0, 0)
@@ -253,21 +251,22 @@ deathspeech = 0
 deadGuy = ""
 def multiRecv(player, players):
     global allowed, voters, targets, deathspeech, deadGuy, all
-
-    while 1:
+    print('In multirecv')
+    while (True):
         msg = recv(all[player][0])
-        if msg == None: continue
+        if (msg is None):
+            continue
 
         #if someones giving a deathspeech
-        if deathspeech and player == deadGuy:
+        if (deathspeech and player == deadGuy):
             broadcast('%s-%s'%(player, msg[2]), modPlayers(player, all))
 
         #if were voting
-        elif votetime and player in voters.keys():
+        elif (votetime and player in voters.keys()):
             vote(player, msg[2])
 
         #if its group chat
-        elif player in allowed:
+        elif (player in allowed):
             broadcast('%s-%s'%(player, msg[2]), modPlayers(player, allowed))
 
         #otherwise prevent spam
