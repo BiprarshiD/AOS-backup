@@ -229,7 +229,7 @@ def standardTurn():
         if len(witch) > 0 and (potions[0] or potions[1]):
             c.broadcast('Witch, open your eyes.', c.complement(witch, all))
             c.log('Witch vote', 0, 1, 0)
-            witchPlayer = witch[witch.keys()[0]]
+            witchPlayer = witch[list(witch.keys())[0]]
 
             if wolfkill:
                 validKills = []
@@ -416,7 +416,7 @@ def main():
     c.log('\nmoderator listener thread started', 1, 0, 1)
 
     all = c.handleConnections(timeTillStart, int(i['randomizeNames']))
-    
+    print(all)
     #ot=Thread(target=c.obscure,args=[])
     #ot.start()
     #c.log('obscurity thread started',1,0,1)
