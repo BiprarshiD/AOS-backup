@@ -1,15 +1,18 @@
-## Issue Identified
+## Atomicity and Deadlock Issues in Existing Code
 
-While testing the werewolves code, we identified an interesting issue with parallel communication. If two or more users send messages at the same time, it becomes more than likely that not all the messages are delivered.
+While testing the werewolves code, we identified an interesting issue with parallel communication. If two or more users send messages at the same time during chatting (discussion) between townspeople, it becomes more than likely that not all the messages are delivered.
 
-Using the script `parallel_conversation.sh` we are trying to identify whether werewolves can handle multiple texts being sent simulatenously. As it is evident from the following image , each box clearly misses a text from a player.
+Using the script `parallel_conversation.sh` we are trying to identify whether werewolves can handle multiple texts being sent simultaneously. As it is evident from the following image, each box clearly misses a text from a player.
 
 ![parallel conversation impeded](https://github.com/BiprarshiD/AOS-backup/assets/46216520/a630c5fd-bff7-475b-b9d9-5a7e8fec6fe1)
 
 
-So our goal for using `posix_ipc` is to solve this atomicity and deadlock issues that arises.
+## Goals for this Project
+1. Solve the atomicity and deadlock issues as described above.
+2. Use POSIX_IPC Message Queues to implement the communication layer in the Werewolves game. Instead of named pipes, our code uses Message Passing using POSIX IPC Message Queues to communicate between players and the moderator.
 
-The game has been tested and verified with 4 players.
+
+The game has been tested and verified with 4 players. [ player0, player1, player2, player ]
 
 ## DIRECTORY STRUCTURE
 
