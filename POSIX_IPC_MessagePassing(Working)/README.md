@@ -14,6 +14,30 @@ Using the script `parallel_conversation.sh` we are trying to identify whether we
 
 The game has been tested and verified with 4 players. [ player0, player1, player2, player ]
 
+
+## SETUP POSIX IPC Message Queues in Kernel
+
+To setup posix_ipc we have to do the following setup:
+
+STEP1:  run sudo bash install.sh after extracting the tarball [ image below ]
+
+
+![step1](https://github.com/BiprarshiD/AOS-backup/assets/46216520/04116fc4-f615-431c-b3b5-60050a1bf7ea)
+
+
+STEP2 : Run the setup.py scripts as the root user [ image below]
+
+![step2](https://github.com/BiprarshiD/AOS-backup/assets/46216520/cc2bc066-7f9b-45f7-8ac8-b2f591becb81)
+
+As shown in the image above, run the following commands as root user.
+The following commands have to be run as the root user to SETUP the kernel with POSIX Message queues
+Run the following from the werewolves directory(main)
+```bash
+sudo su
+python3 setup.py
+```
+
+
 ## DIRECTORY STRUCTURE
 
 The file layout is as follows:
@@ -56,28 +80,6 @@ communicationclient3.py
 
 The communication script will be different across players and the moderator. No change has been made to the client.py and server.py. The communication between
 players and the moderator to do voting, chatting and connection are made through POSIC IPC Message Queues using Message Passing.
-
-## SETUP POSIX IPC Message Queues in Kernel
-
-To setup posix_ipc we have to do the following setup:
-
-STEP1:  run sudo bash install.sh after extracting the tarball [ image below ]
-
-
-![step1](https://github.com/BiprarshiD/AOS-backup/assets/46216520/04116fc4-f615-431c-b3b5-60050a1bf7ea)
-
-
-STEP2 : Run the setup.py scripts as the root user [ image below]
-
-![step2](https://github.com/BiprarshiD/AOS-backup/assets/46216520/cc2bc066-7f9b-45f7-8ac8-b2f591becb81)
-
-As shown in the image above, run the following commands as root user.
-The following commands have to be run as the root user to SETUP the kernel with POSIX Message queues
-Run the following from the werewolves directory(main)
-```bash
-sudo su
-python3 setup.py
-```
 
 
 ## Scripts to run from moderator and players
