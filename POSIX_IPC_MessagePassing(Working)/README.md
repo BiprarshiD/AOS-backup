@@ -79,8 +79,6 @@ sudo su
 python3 setup.py
 ```
 
-![setup py](https://github.com/BiprarshiD/AOS-backup/assets/46216520/04d7f1e3-4b4a-4e7f-a8bb-2b93f015a004)
-
 
 ## Scripts to run from moderator and players
 
