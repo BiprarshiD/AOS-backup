@@ -90,6 +90,16 @@ Scripts to run from moderator:
 Scripts to run from players:
 `python3 client.py`
 
+## GAMEPLAY SCREENSHOTS
+
+![gameplayscreenshot1](https://github.com/BiprarshiD/AOS-backup/assets/46216520/826edbf6-beda-4bb3-812e-68119cc4868e)
+
+
+![gameplayscreenshot2](https://github.com/BiprarshiD/AOS-backup/assets/46216520/c0284d8e-90f5-4327-9f6c-b48f9a145d43)
+
+
+![gameplayscreenshot3](https://github.com/BiprarshiD/AOS-backup/assets/46216520/e794633f-1ba5-492e-9455-a463734c7576)
+
 
 ## Python2 to Python3 Porting
 
