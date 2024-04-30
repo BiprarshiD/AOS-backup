@@ -19,8 +19,9 @@ The game has been tested and verified with 4 players. [ player0, player1, player
 
 To setup posix_ipc we have to do the following setup:
 
-Extract the werewolves.tar using 
-'tar xzf werewolves.tar`
+Extract the werewolves.tar using :
+
+```tar xzf werewolves.tar```
 
 
 STEP1:  run sudo bash install.sh after extracting the tarball [ image below ]
