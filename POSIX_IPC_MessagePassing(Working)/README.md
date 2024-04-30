@@ -72,13 +72,20 @@ python3 setup.py
 
 ## Scripts to run from moderator and players
 
+>Note [ IMPORTANT ]: [change the import header for communicationclient.py in each client.py(`line 27`) file according to the player]
+>Refer the following image. The client.py file for each player has been shown below. The header line has been changed in each player to import a different communication.py file.
+
+![client py modifications](https://github.com/BiprarshiD/AOS-backup/assets/46216520/97238402-bf78-4792-9d69-b7c06297abef)
+
+
+
 Scripts to run from moderator:
 `python3 server.py`
 
 Scripts to run from players:
 `python3 client.py`
 
->Note: [change the import header for communicationclient.py in each client.py(`line 27`) file according to the player]
+
 
 ```
 Player0: import communicationclient
