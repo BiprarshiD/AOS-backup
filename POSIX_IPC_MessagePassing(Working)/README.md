@@ -86,11 +86,15 @@ players and the moderator to do voting, chatting and connection are made through
 
 PLAY THE GAME!
 
-Scripts to run from moderator:
-`python3 server.py`
+Scripts to run FROM MODERATOR:
+```
+python3 server.py
+```
 
-Scripts to run from players:
-`python3 client.py`
+Scripts to run FROM PLAYERS:
+```
+python3 client.py
+```
 
 ## GAMEPLAY SCREENSHOTS
 
