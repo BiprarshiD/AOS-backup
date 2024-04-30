@@ -60,7 +60,19 @@ players and the moderator to do voting, chatting and connection are made through
 ## SETUP POSIX IPC Message Queues in Kernel
 
 To setup posix_ipc we have to do the following setup:
-The following commands have to be run as the root user to setup the kernel with POSIX Message queues
+
+STEP1:  run sudo bash install.sh after extracting the tarball [ image below ]
+
+
+![step1](https://github.com/BiprarshiD/AOS-backup/assets/46216520/04116fc4-f615-431c-b3b5-60050a1bf7ea)
+
+
+STEP2 : Run the setup.py scripts as the root user [ image below]
+
+![step2](https://github.com/BiprarshiD/AOS-backup/assets/46216520/cc2bc066-7f9b-45f7-8ac8-b2f591becb81)
+
+As shown in the image above, run the following commands as root user.
+The following commands have to be run as the root user to SETUP the kernel with POSIX Message queues
 Run the following from the werewolves directory(main)
 ```bash
 sudo su
@@ -72,24 +84,7 @@ python3 setup.py
 
 ## Scripts to run from moderator and players
 
->Note [ IMPORTANT ]: [change the import header for communicationclient.py in each client.py(`line 27`) file according to the player]
->Refer the following image. The client.py file for each player has been shown below. The header line has been changed in each player to import a different communication.py file.
-
-![client py modifications](https://github.com/BiprarshiD/AOS-backup/assets/46216520/97238402-bf78-4792-9d69-b7c06297abef)
-Line 27 has to be changed as shown in the above image. Change Line 27 in each client.py file belonging to player0, player1, player2 and player3.
-```
-Player0: import communicationclient as c
-```
-```
-Player1 : import communicationclient1 as c
-```
-```
-Player2 : import communicationclient2 as c
-```
-```
-Player3 : import communicationclient3 as c
-```
-
+PLAY THE GAME!
 
 Scripts to run from moderator:
 `python3 server.py`
