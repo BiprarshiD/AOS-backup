@@ -28,7 +28,7 @@ To setup posix_ipc we have to do the following setup:
 
 Extract the werewolves.tar using :
 
-```tar xzf werewolves.tar```
+```tar xzf werewolves.tar.gz```
 
 
 STEP1:  run sudo bash install.sh after extracting the tarball [ image below ]
