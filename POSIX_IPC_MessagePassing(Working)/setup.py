@@ -1,4 +1,22 @@
 import subprocess
+import os
+
+def update_import_line(file_path, old_line, new_line):
+    """
+    Update the specified line in a Python file.
+    """
+    # Read the original contents
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    
+    # Modify the line
+    with open(file_path, 'w') as file:
+        for line in lines:
+            if line.strip() == old_line:
+                file.write(new_line + '\n')
+            else:
+                file.write(line)
+
 
 def run_command(command):
     """
@@ -32,6 +50,28 @@ def main():
     # Change directory to /dev/mqueue and change permissions
     # These two steps are combined as changing the directory is not persistent across subprocess calls
     run_command('cd /dev/mqueue && chmod 777 message_queue*')
+
+    file_path = os.path.join('/home/player1/', 'client.py')
+    old_import_line = 'import communicationclient as c'
+    new_import_line = 'import communicationclient1 as c'
+    update_import_line(file_path, old_import_line, new_import_line)
+
+    file_path = os.path.join('/home/player2/', 'client.py')
+    old_import_line = 'import communicationclient as c'
+    new_import_line = 'import communicationclient2 as c'
+    update_import_line(file_path, old_import_line, new_import_line)
+
+    file_path = os.path.join('/home/player3/', 'client.py')
+    old_import_line = 'import communicationclient as c'
+    new_import_line = 'import communicationclient3 as c'
+    update_import_line(file_path, old_import_line, new_import_line)
+
+    run_command('cp communicationclient.py /home/player0/')
+    run_command('cp communicationclient1.py /home/player1/')
+    run_command('cp communicationclient2.py /home/player2/')
+    run_command('cp communicationclient3.py /home/player3/')
+
+
 
 if __name__ == "__main__":
     main()
