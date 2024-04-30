@@ -55,14 +55,15 @@ players and the moderator to do voting, chatting and connection are made through
 ## SETUP POSIX IPC Message Queues in Kernel
 
 To setup posix_ipc we have to do the following setup:
-cd to the moderator user directory
-run the following commands one by one to create the message queues and install posix_ipc
-The following commands have to be run as the root user in order to setup the kernel with POSIX Message queues
+The following commands have to be run as the root user to setup the kernel with POSIX Message queues
+Run the following from the werewolves directory(main)
 ```bash
 sudo su
-
+python3 setup.py
 ```
-create_queues.sh file will generate all the necessary message queues
+
+![setup py](https://github.com/BiprarshiD/AOS-backup/assets/46216520/04d7f1e3-4b4a-4e7f-a8bb-2b93f015a004)
+
 
 ## Scripts to run from moderator and players
 
