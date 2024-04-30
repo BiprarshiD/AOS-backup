@@ -24,6 +24,8 @@ moderator user directory contains:
 server.py
 communication_server.py
 ```
+![moderatordir](https://github.com/BiprarshiD/AOS-backup/assets/46216520/3dfd353c-ffd5-488a-ab19-053c8a8b924f)
+
 
 player0 user directory contains:
 ```
@@ -48,6 +50,9 @@ player3 user directory contains:
 client.py
 communicationclient3.py
 ```
+![playersdir](https://github.com/BiprarshiD/AOS-backup/assets/46216520/e8a542db-c821-4e53-8a60-a862af1602c6)
+
+
 
 The communication script will be different across players and the moderator. No change has been made to the client.py and server.py. The communication between
 players and the moderator to do voting, chatting and connection are made through POSIC IPC Message Queues using Message Passing.
