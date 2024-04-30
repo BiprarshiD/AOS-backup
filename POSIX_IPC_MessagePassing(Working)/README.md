@@ -1,5 +1,6 @@
 ## Team Members
 Biprarshi Dutta
+
 Ishraq R Rahman
 
 Use of Code in Future offerings of CSE 536 or any other course taught by Prof. Jedidah Crandall: Allowed
