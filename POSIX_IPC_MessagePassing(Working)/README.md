@@ -76,7 +76,19 @@ python3 setup.py
 >Refer the following image. The client.py file for each player has been shown below. The header line has been changed in each player to import a different communication.py file.
 
 ![client py modifications](https://github.com/BiprarshiD/AOS-backup/assets/46216520/97238402-bf78-4792-9d69-b7c06297abef)
-
+Line 27 has to be changed as shown in the above image. Change Line 27 in each client.py file belonging to player0, player1, player2 and player3.
+```
+Player0: import communicationclient as c
+```
+```
+Player1 : import communicationclient1 as c
+```
+```
+Player2 : import communicationclient2 as c
+```
+```
+Player3 : import communicationclient3 as c
+```
 
 
 Scripts to run from moderator:
@@ -86,22 +98,8 @@ Scripts to run from players:
 `python3 client.py`
 
 
-
-```
-Player0: import communicationclient
-```
-```
-Player1 : import communicationclient1
-```
-```
-Player2 : import communicationclient2
-```
-```
-Player3 : import communicationclient3
-```
-
 ## Python2 to Python3 Porting
 
 Ported the Code from python2 to python3
 Used Python3 to run werewolves. Converted all python2 statements to python3 like print ---> print(), exception ---> exception() and raw_input()--->input()
-Also, In python2, dict.keys() is not subscriptable. so changed those statements in server.py and client.py to list(dict.keys()). This change made the keys arrays of the dictionary into a list.
+Also, in Python2, dict.keys() is not subscriptable. so changed those statements in server.py and client.py to list(dict.keys()). This change made the keys arrays of the dictionary into a list.
