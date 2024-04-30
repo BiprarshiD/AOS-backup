@@ -1,3 +1,9 @@
+## Team Members
+Biprarshi Dutta
+Ishraq R Rahman
+
+Use of Code in Future offerings of CSE 536 or any other course taught by Prof. Jedidah Crandall: Allowed
+
 ## Atomicity and Deadlock Issues in Existing Code
 
 While testing the werewolves code, we identified an interesting issue with parallel communication. If two or more users send messages at the same time during chatting (discussion) between townspeople, it becomes more than likely that not all the messages are delivered.
